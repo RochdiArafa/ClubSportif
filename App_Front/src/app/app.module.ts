@@ -1,3 +1,4 @@
+import { SportService } from './../shard/sport.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -34,7 +35,7 @@ import { JoueurComponent } from './joueur/joueur.component';
         component: HomeComponent
     },
     {
-        path: 'club',
+        path: 'club/:name',
         component: ClubComponent
     },
     {
@@ -46,7 +47,7 @@ import { JoueurComponent } from './joueur/joueur.component';
       component: SportComponent
     },
     {
-      path: 'joueur',
+      path: 'joueur/:name',
       component: JoueurComponent
     },
     {
@@ -55,7 +56,9 @@ import { JoueurComponent } from './joueur/joueur.component';
     }
    ])
   ],
-  providers: [],
+  providers: [
+    SportService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

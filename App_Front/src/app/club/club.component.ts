@@ -1,4 +1,6 @@
+import { SportService } from './../../shard/sport.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-club',
@@ -6,11 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./club.component.css']
 })
 export class ClubComponent implements OnInit {
-
-  sport : String ="Football"
-  constructor() { }
+  clubs: any[] = [];
+  sport : String =""
+  constructor(private service: SportService, private activatedRoute: ActivatedRoute) {
+    this.activatedRoute.params.subscribe(params => {
+        this.sport = params['name'];
+    });
+  }
 
   ngOnInit() {
+    this.getFootBallTeams();
+  }
+
+  getFootBallTeams() {
+    this.service.getFootBallTeams().subscribe( res => this.clubs = res);
   }
 
 }
