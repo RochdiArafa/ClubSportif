@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClubComponent implements OnInit {
 
+  sport : String ="Football"
   constructor() { }
 
   ngOnInit() {
