@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ResultsComponent } from './results/results.component';
 import { SportComponent } from './sport/sport.component';
+import { JoueurComponent } from './joueur/joueur.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SportComponent } from './sport/sport.component';
     NavbarComponent,
     FooterComponent,
     ResultsComponent,
-    SportComponent
+    SportComponent,
+    JoueurComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,10 @@ import { SportComponent } from './sport/sport.component';
     {
       path: 'sport',
       component: SportComponent
+    },
+    {
+      path: 'joueur',
+      component: JoueurComponent
     },
     {
         path: '**',
