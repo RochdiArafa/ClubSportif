@@ -1,0 +1,59 @@
+<!-- Page Preloder -->
+<div id="preloder">
+  <div class="loader"></div>
+</div>
+
+<!-- Offcanvas Menu Section End -->
+<!-- Header Section Begin -->
+<header class="header-section">
+  <div class="header__top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="ht-info">
+            <ul>
+              <li>{{FullDate}}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="ht-links">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-vimeo"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+          <div class="logo">
+            <a href="./index.html"><img
+                src="assets/template/images/logo.png"
+                alt></a>
+          </div>
+        </div>
+        <div class="col-lg-10">
+          <div class="nav-menu">
+            <ul class="main-menu">
+              <li><a [routerLink]="['/']" routerLinkActive="router-link-active"  >Home</a></li>
+              <li><a [routerLink]="['club']" >Club</a></li>
+              <li><a [routerLink]="['results']">Results</a></li>
+              <li><a [routerLink]="['/sport']">Sport</a></li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="canvas-open">
+        <i class="fa fa-bars"></i>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Header End -->
