@@ -467,6 +467,32 @@
     
 
 
+    <!-- http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Inter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Inter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Equipe-FootBall"/>
+        <Entaîner_Par rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Zhang"/>
+        <Gérer_Par rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Jindong"/>
+        <Participe rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Match4"/>
+        <Nom_Equipe rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inter</Nom_Equipe>
+        <Nombre_Joueurs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</Nombre_Joueurs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Jindong -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Jindong">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Président"/>
+        <Gére rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Inter"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">57</Age>
+        <Nationalite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</Nationalite>
+        <Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jindong</Nom>
+        <Prenom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang</Prenom>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Juventus -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Juventus">
@@ -534,6 +560,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Match4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Match4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Tournement-FootBall"/>
+        <DateMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20-02-2021</DateMatch>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Messi -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Messi">
@@ -543,6 +578,32 @@
         <Nationalite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Argentin</Nationalite>
         <Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lionel</Nom>
         <Prenom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Messi</Prenom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Milan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Milan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Equipe-FootBall"/>
+        <Entaîner_Par rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Stefano"/>
+        <Gérer_Par rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Paolo"/>
+        <Participe rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Match4"/>
+        <Nom_Equipe rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milan</Nom_Equipe>
+        <Nombre_Joueurs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</Nombre_Joueurs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Paolo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Paolo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Président"/>
+        <Gére rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Milan"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">73</Age>
+        <Nationalite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italie</Nationalite>
+        <Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paolo</Nom>
+        <Prenom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scaroni</Prenom>
     </owl:NamedIndividual>
     
 
@@ -619,6 +680,32 @@
         <Nationalite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanish</Nationalite>
         <Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandro</Nom>
         <Prenom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosell</Prenom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Stefano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Stefano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Entraineur"/>
+        <Entraine rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Milan"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">55</Age>
+        <Nationalite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italien</Nationalite>
+        <Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefano</Nom>
+        <Prenom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pioli</Prenom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Zhang -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Zhang">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Entraineur"/>
+        <Gére rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Inter"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28</Age>
+        <Nationalite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</Nationalite>
+        <Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang</Nom>
+        <Prenom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kangyang</Prenom>
     </owl:NamedIndividual>
 </rdf:RDF>
 
