@@ -41,8 +41,24 @@ export class SportService {
     }), catchError(this.handleError));
   }
 
-  getAllPlayers() {
-    return this.http.get(`http://localhost:8080/api/sport/AllPlayers`)
+  getAllPlayers(teamName : String) {
+    return this.http.get(`http://localhost:8080/api/sport/playersByTeam/` + teamName)
+    .pipe(map((res: any) => {
+      const data = JSON.parse(res._body);
+      return data.results.bindings
+    }), catchError(this.handleError));
+  }
+
+  getAllMatch() {
+    return this.http.get(`http://localhost:8080/api/sport/allMatch`)
+    .pipe(map((res: any) => {
+      const data = JSON.parse(res._body);
+      return data.results.bindings
+    }), catchError(this.handleError));
+  }
+
+  getAllEndedMatch() {
+    return this.http.get(`http://localhost:8080/api/sport/endedmatch`)
     .pipe(map((res: any) => {
       const data = JSON.parse(res._body);
       return data.results.bindings

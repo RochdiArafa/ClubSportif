@@ -1,0 +1,30 @@
+<!-- Match Section Begin -->
+<section class="match-section set-bg" data-setbg="assets/template/images/match/match-bg.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ms-content">
+          <h4 style="color: black; text-align: center">List Sports :</h4>
+          <div class="">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Clubs</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let sport of sports; let i = index">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td>{{ sport.typesport.value.split('#')[1]}}</td>
+                  <td><a type="button" class="btn btn-primary" [routerLink]="['/club', sport.typesport.value.split('#')[1]]">Visit</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

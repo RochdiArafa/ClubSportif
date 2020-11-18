@@ -282,7 +282,7 @@ public class SportController {
 	}
 
 	// Get Match all ended match ..."
-	@GetMapping("/allMatch")
+	@GetMapping("/SportTeams")
 	public String getAllMatchs() {
 		String NS = "";
 		// lire le model a partir d'une ontologie

@@ -23,7 +23,7 @@ export class JoueurComponent implements OnInit {
   }
 
   getAllPlayers() {
-    this.service.getAllPlayers().subscribe( res => this.players = res);
+    this.service.getAllPlayers(this.club).subscribe( res => this.players = res);
   }
 
   searchPlayers() {

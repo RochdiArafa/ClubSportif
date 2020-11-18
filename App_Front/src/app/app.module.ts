@@ -1,3 +1,4 @@
+import { RecentResultsComponent } from './recent-results/recent-results.component';
 import { SportService } from './../shard/sport.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,6 +15,7 @@ import { ResultsComponent } from './results/results.component';
 import { SportComponent } from './sport/sport.component';
 import { JoueurComponent } from './joueur/joueur.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import { JoueurComponent } from './joueur/joueur.component';
     FooterComponent,
     ResultsComponent,
     SportComponent,
-    JoueurComponent
+    JoueurComponent,
+    RecentResultsComponent,
   ],
   imports: [
     BrowserModule,
