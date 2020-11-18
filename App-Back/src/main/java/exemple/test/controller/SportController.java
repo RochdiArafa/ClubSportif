@@ -29,9 +29,10 @@ public class SportController {
 			return JenaEngine.executeQueryFile(inferedModel,
 					"PREFIX ns: <http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#> \r\n"
 							+ "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \r\n"
-							+ "SELECT distinct ?name ?Nombre_Joueurs \r\n" + "WHERE { \r\n"
+							+ "SELECT distinct ?name ?Nombre_Joueurs ?participe \r\n" + "WHERE { \r\n"
 							+ "?equipe rdf:type ns:Equipe-" + sporttype + ". \r\n" + "?equipe ns:Nom_Equipe ?name ."
-							+ "?equipe ns:Nombre_Joueurs ?Nombre_Joueurs . }");
+							+ "?equipe ns:Nombre_Joueurs ?Nombre_Joueurs ."
+							+ "?equipe ns:Participe ?participe . }");
 
 		} else {
 			return "Error when reading model from ontology";
