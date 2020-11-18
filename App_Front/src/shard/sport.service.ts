@@ -9,8 +9,8 @@ export class SportService {
 
   constructor(private http: Http, public router: Router) {}
 
-   getFootBallTeams() {
-     return this.http.get(`api/sport/footballTeams`).pipe(map((res: any) => {
+   getFootBallTeams(typesport:String) {
+     return this.http.get(`http://localhost:8080/api/sport/SportTeams/`+typesport).pipe(map((res: any) => {
       const data = JSON.parse(res._body);
       return data.results.bindings
     }), catchError(this.handleError));
@@ -19,21 +19,21 @@ export class SportService {
 
 
   getAllSports() {
-    return this.http.get(`api/sport/SportsType`).pipe(map((res: any) => {
+    return this.http.get(`http://localhost:8080/api/sport/SportsType`).pipe(map((res: any) => {
       const data = JSON.parse(res._body);
       return data.results.bindings
     }), catchError(this.handleError));
   }
 
   findPlayer(nom: string, prenom: string) {
-    return this.http.get(`api/sport/findPlayer/` + nom + `/` + prenom).pipe(map((res: any) => {
+    return this.http.get(`http://localhost:8080/api/sport/findPlayer/` + nom + `/` + prenom).pipe(map((res: any) => {
       const data = JSON.parse(res._body);
       return data.results.bindings
     }), catchError(this.handleError));
   }
 
   getAllPlayers() {
-    return this.http.get(`api/sport/AllPlayers`)
+    return this.http.get(`http://localhost:8080/api/sport/AllPlayers`)
     .pipe(map((res: any) => {
       const data = JSON.parse(res._body);
       return data.results.bindings

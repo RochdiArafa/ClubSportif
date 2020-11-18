@@ -1,5 +1,6 @@
 package exemple.test.controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hp.hpl.jena.rdf.model.Model;
 import tools.JenaEngine;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/sport")
 public class SportController {
@@ -27,9 +29,10 @@ public class SportController {
 			return JenaEngine.executeQueryFile(inferedModel,
 					"PREFIX ns: <http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#> \r\n"
 							+ "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \r\n"
-							+ "SELECT distinct?equipe \r\n" + "WHERE { \r\n"
+							+ "SELECT distinct ?name ?Nombre_Joueurs \r\n" + "WHERE { \r\n"
 							+ "?equipe rdf:type ns:Equipe-"+ sporttype + ". \r\n" + 
-							"}");
+							"?equipe ns:Nom_Equipe ?name ."
+							+ "?equipe ns:Nombre_Joueurs ?Nombre_Joueurs . }");
 
 		} else {
 			return "Error when reading model from ontology";
@@ -55,10 +58,11 @@ public class SportController {
 					"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n" + 
 					"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\r\n" + 
 					"PREFIX DomaineSports: <http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#>\r\n" + 
-					"SELECT  distinct ?equipe ?name ?Nombre_Joueurs\r\n" + 
+					"SELECT  distinct ?equipe ?name ?Nombre_Joueurs ?participe \r\n" + 
 					"	WHERE { ?equipe rdf:type ns:Equipe-FootBall.\r\n" + 
 					"	                   ?equipe ns:Nom_Equipe ?name .\r\n" + 
 					"	                   ?equipe ns:Nombre_Joueurs ?Nombre_Joueurs .\r\n" +
+					"	                   ?equipe ns:Participe ?participe . \r\n" +					
 					"FILTER (?name = \"" + teamName + "\" )" +
 					"	}	");
 

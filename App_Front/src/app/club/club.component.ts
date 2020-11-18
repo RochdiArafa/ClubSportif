@@ -18,10 +18,14 @@ export class ClubComponent implements OnInit {
 
   ngOnInit() {
     this.getFootBallTeams();
+
   }
 
   getFootBallTeams() {
-    this.service.getFootBallTeams().subscribe( res => this.clubs = res);
+    this.service.getFootBallTeams(this.sport).subscribe( res => {
+      this.clubs = res;
+    console.log(res);
+    } );
   }
 
 }
