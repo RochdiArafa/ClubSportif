@@ -15,11 +15,13 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let sport of sports; let i = index">
-                  <th scope="row">{{ i + 1 }}</th>
-                  <td>{{ sport.typesport.value.split('#')[1]}}</td>
-                  <td><a type="button" class="btn btn-primary" [routerLink]="['/club', sport.typesport.value.split('#')[1]]">Visit</a></td>
-                </tr>
+                <ng-container *ngFor="let sport of sports; let i = index">
+                  <tr *ngIf="sport.typesport.value.split('#')[1] !== 'Nothing' && sport.typesport.value.split('#')[1] !== 'Sports'">
+                    <th scope="row">{{ i }}</th>
+                    <td>{{ sport.typesport.value.split('#')[1]}}</td>
+                    <td><a type="button" class="btn btn-primary" [routerLink]="['/club', sport.typesport.value.split('#')[1]]">Visit</a></td>
+                  </tr>
+                </ng-container>
               </tbody>
             </table>
           </div>
