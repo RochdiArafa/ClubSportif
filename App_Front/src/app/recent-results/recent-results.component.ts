@@ -22,11 +22,14 @@ export class RecentResultsComponent implements OnInit {
             matchs.map( m => {
               let participe = []
               teams.map(team => {
-                if (team.participe.value === m.match.value)
+                if (team.participe.value === m.match.value) {
                   participe.push(team)
+                }
               });
-              m.participe = participe
-              this.matchs.push(m)
+              if (participe.length) {
+                m.participe = participe
+                this.matchs.push(m)
+              }
             })
           }
         })
