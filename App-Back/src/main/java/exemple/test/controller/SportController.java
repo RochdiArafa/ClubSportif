@@ -18,7 +18,7 @@ public class SportController {
 		// lire le model a partir d'une ontologie
 		Model model = JenaEngine.readModel("data/Sports.owl");
 		if (model != null) {
-			// lire le Namespace de l’ontologie
+			// lire le Namespace de lâ€™ontologie
 			NS = model.getNsPrefixURI("");
 			// apply our rules on the owlInferencedModel
 			Model inferedModel = JenaEngine.readInferencedModelFromRuleFile(model, "data/rules.txt");
@@ -41,7 +41,7 @@ public class SportController {
 		// lire le model a partir d'une ontologie
 		Model model = JenaEngine.readModel("data/Sports.owl");
 		if (model != null) {
-			// lire le Namespace de l’ontologie
+			// lire le Namespace de lâ€™ontologie
 			NS = model.getNsPrefixURI("");
 			// apply our rules on the owlInferencedModel
 			Model inferedModel = JenaEngine.readInferencedModelFromRuleFile(model, "data/rules.txt");
@@ -65,7 +65,7 @@ public class SportController {
 		// lire le model a partir d'une ontologie
 		Model model = JenaEngine.readModel("data/Sports.owl");
 		if (model != null) {
-			// lire le Namespace de l’ontologie
+			// lire le Namespace de lâ€™ontologie
 			NS = model.getNsPrefixURI("");
 			// apply our rules on the owlInferencedModel
 			Model inferedModel = JenaEngine.readInferencedModelFromRuleFile(model, "data/rules.txt");
@@ -95,7 +95,7 @@ public class SportController {
 		// lire le model a partir d'une ontologie
 		Model model = JenaEngine.readModel("data/Sports.owl");
 		if (model != null) {
-			// lire le Namespace de l’ontologie
+			// lire le Namespace de lâ€™ontologie
 			NS = model.getNsPrefixURI("");
 			// apply our rules on the owlInferencedModel
 			Model inferedModel = JenaEngine.readInferencedModelFromRuleFile(model, "data/rules.txt");
