@@ -5,9 +5,11 @@ import java.io.File;
 import java.io.InputStream;
 import java.util.List;
 
+import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.query.ResultSetFormatter;
 import com.hp.hpl.jena.rdf.model.*;
 import com.hp.hpl.jena.reasoner.rulesys.GenericRuleReasoner;
@@ -83,10 +85,10 @@ public class JenaEngine {
 	 *             SparQL + Sortie: le resultat de la requete en String
 	 */
 	static public String executeQuery(Model model, String queryString) {
-		com.hp.hpl.jena.query.Query query = QueryFactory.create(queryString); // No reasoning
+		Query query = QueryFactory.create(queryString); // No reasoning
 		// Execute the query and obtain results
 		QueryExecution qe = QueryExecutionFactory.create(query, model);
-		com.hp.hpl.jena.query.ResultSet results = qe.execSelect();
+		ResultSet results = qe.execSelect();
 		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 
 		ResultSetFormatter.outputAsJSON(outputStream, results);
@@ -97,6 +99,7 @@ public class JenaEngine {
 		
 		return json;
 	}
+
 
 	/**
 	 * Executer un fichier d'une requete

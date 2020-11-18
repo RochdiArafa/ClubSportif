@@ -1,6 +1,12 @@
-PREFIX ns: <http://www.owl-ontologies.com/Famille.owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-SELECT ?personne 
-WHERE { 
-?personne rdf:type ns:Personne . 
-}
+PREFIX ns: <http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+	
+SELECT  distinct ?match ?DateMatch ?ScoreMatch
+	WHERE { ?match rdf:type ns:Tournement-FootBall . 
+                ?match ns:DateMatch ?DateMatch .
+	        ?match ns:ScoreMatch ?ScoreMatch .                
+            FILTER EXISTS { ?match ns:ScoreMatch ?ScoreMatch . }                  
+	}
