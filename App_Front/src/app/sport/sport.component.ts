@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SportService } from 'shard/sport.service';
 
 @Component({
   selector: 'app-sport',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sport.component.css']
 })
 export class SportComponent implements OnInit {
-
-  constructor() { }
+  sports: any[] = [];
+  constructor(private service: SportService) { }
 
   ngOnInit() {
+    this.getAllPlayers();
   }
+
+  getAllPlayers() {
+    this.service.getAllSports().subscribe( res => this.sports = res);
+  }
+
 
 }

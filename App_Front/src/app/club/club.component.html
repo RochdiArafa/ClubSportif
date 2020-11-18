@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="ms-content">
-          <h4 style="color: black; text-align: center">List Clubs of sport {{sport}}</h4>
+          <h4 style="color: black; text-align: center"> of sport {{sport}}</h4>
           <div class="">
             <input type="text" name="club" id="club" placeholder="search club"> <button type="button" class="btn btn-secondary">Search</button> <br> <br>
             <table class="table table-striped">
@@ -19,38 +19,14 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr *ngFor="let club of clubs; let i = index">
                   <th scope="row">1</th>
-                  <td>Mark</td>
+                  <td>{{ club.equipe.value.split('#')[1]}}</td>
                   <td>11</td>
                   <td>@mdo</td>
                   <td>Otto</td>
-                  <td><a type="button" class="btn btn-primary" [routerLink]="['/joueur']">Visit</a></td>
+                  <td><a type="button" class="btn btn-primary" [routerLink]="['/joueur',  club.equipe.value.split('#')[1]]">Visit</a></td>
                 </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Mark</td>
-                  <td>20</td>
-                  <td>@mdo</td>
-                  <td>Otto</td>
-                  <td><button type="button" class="btn btn-primary">Visit</button></td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Mark</td>
-                  <td>11</td>
-                  <td>@mdo</td>
-                  <td>Otto</td>
-                  <td><button type="button" class="btn btn-primary">Visit</button></td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Mark</td>
-                  <td>20</td>
-                  <td>@mdo</td>
-                  <td>Otto</td>
-                  <td><button type="button" class="btn btn-primary">Visit</button></td>
-                </tr>                
               </tbody>
             </table>
           </div>

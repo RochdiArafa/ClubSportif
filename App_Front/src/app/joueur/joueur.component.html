@@ -6,10 +6,10 @@
         <div class="ms-content">
           <h4 style="color: black; text-align: center">List Joueur de la club {{club}}</h4>
           <div class="">
-            <input type="text" name="club" id="club" placeholder="FirstName">
-            <input type="text" name="club" id="club" placeholder="LastName">
+            <input type="text" name="club" id="club" placeholder="FirstName" [(ngModel)]="firstname">
+            <input type="text" name="club" id="club" placeholder="LastName" [(ngModel)]="lastname">
              <button type="button"
-              class="btn btn-secondary">Search</button> <br> <br>
+              class="btn btn-secondary" (click)="searchPlayers()">Search</button> <br> <br>
             <table class="table table-striped">
               <thead>
                 <tr>
@@ -22,37 +22,13 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">1</th>
+                <tr *ngFor="let player of players; let i = index">
+                  <th scope="row">{{ i + 1 }}</th>
                   <td></td>
-                  <td>Lionel</td>
-                  <td>Messi</td>
-                  <td>29</td>
-                  <td>Argentin</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td></td>
-                  <td>Cristiano</td>
-                  <td>Renaldo</td>
-                  <td>30</td>
-                  <td>Argentin</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td></td>
-                  <td>Lionel</td>
-                  <td>Messi</td>
-                  <td>29</td>
-                  <td>Argentin</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td></td>
-                  <td>Lionel</td>
-                  <td>Messi</td>
-                  <td>29</td>
-                  <td>Argentin</td>
+                  <td>{{ player.Prenom.value}}</td>
+                  <td>{{ player.Nom.value}}</td>
+                  <td>{{ player.Age.value}}</td>
+                  <td>{{ player.Nationalite.value}}</td>
                 </tr>
               </tbody>
             </table>

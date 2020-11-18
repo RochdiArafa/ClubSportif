@@ -15,26 +15,11 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Football</td>
-                  <td><a type="button" class="btn btn-primary" [routerLink]="['/club']">Visit</a></td>
+                <tr *ngFor="let sport of sports; let i = index">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td>{{ sport.typesport.value.split('#')[1]}}</td>
+                  <td><a type="button" class="btn btn-primary" [routerLink]="['/club', sport.typesport.value.split('#')[1]]">Visit</a></td>
                 </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Tenis</td>
-                  <td><button type="button" class="btn btn-primary">Visit</button></td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Handball</td>
-                  <td><button type="button" class="btn btn-primary">Visit</button></td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Regbi</td>
-                  <td><button type="button" class="btn btn-primary">Visit</button></td>
-                </tr>                
               </tbody>
             </table>
           </div>
