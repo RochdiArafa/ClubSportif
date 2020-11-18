@@ -9,7 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ClubComponent implements OnInit {
   clubs: any[] = [];
-  sport : String =""
+  sport : String ="";
+  teamName : any;
   constructor(private service: SportService, private activatedRoute: ActivatedRoute) {
     this.activatedRoute.params.subscribe(params => {
         this.sport = params['name'];
@@ -24,8 +25,11 @@ export class ClubComponent implements OnInit {
   getFootBallTeams() {
     this.service.getFootBallTeams(this.sport).subscribe( res => {
       this.clubs = res;
-    console.log(res);
     } );
+  }
+
+  searchTeams() {
+    this.service.findTeam(this.teamName).subscribe( res => this.clubs = res );
   }
 
 }

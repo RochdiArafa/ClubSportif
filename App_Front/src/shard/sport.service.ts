@@ -17,6 +17,15 @@ export class SportService {
 
   }
 
+  findTeam(teamName:String) {
+    return this.http.get(`http://localhost:8080/api/sport/teamsDetails/`+ teamName).pipe(map((res: any) => {
+     const data = JSON.parse(res._body);
+     return data.results.bindings
+   }), catchError(this.handleError));
+
+ }
+
+
 
   getAllSports() {
     return this.http.get(`http://localhost:8080/api/sport/SportsType`).pipe(map((res: any) => {

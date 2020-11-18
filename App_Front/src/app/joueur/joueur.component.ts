@@ -27,6 +27,6 @@ export class JoueurComponent implements OnInit {
   }
 
   searchPlayers() {
-    this.service.findPlayer(this.lastname, this.firstname).subscribe( res => { this.players = res; console.log(res)});
+    this.service.findPlayer(this.lastname, this.firstname).subscribe( res =>  this.players = res);
   }
 }

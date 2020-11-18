@@ -6,7 +6,7 @@
         <div class="ms-content">
           <h4 style="color: black; text-align: center"> List club of sport {{sport}}</h4>
           <div class="">
-            <input type="text" name="club" id="club" placeholder="search club"> <button type="button" class="btn btn-secondary">Search</button> <br> <br>
+            <input type="text" name="club" id="club" placeholder="search club" [(ngModel)]="teamName"> <button type="button" class="btn btn-secondary" (click)="searchTeams()">Search</button> <br> <br>
             <table class="table table-striped">
               <thead>
                 <tr>
@@ -20,12 +20,12 @@
               </thead>
               <tbody>
                 <tr *ngFor="let club of clubs; let i = index">
-                  <th scope="row"></th>
-                  <td>{{ club.name.value.split('#')[1]}}</td>
-                  <td>11</td>
+                  <th scope="row">{{ i + 1 }} </th>
+                  <td>{{ club.name.value}}</td>
+                  <td>{{ club.Nombre_Joueurs.value }}</td>
                   <td>@mdo</td>
                   <td>Otto</td>
-                  <td><a type="button" class="btn btn-primary" [routerLink]="['/joueur',  club.equipe.value.split('#')[1]]">Visit</a></td>
+                  <td><a type="button" class="btn btn-primary" [routerLink]="['/joueur',  club.name.value]">Visit</a></td>
                 </tr>
               </tbody>
             </table>
