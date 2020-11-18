@@ -22,6 +22,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Entaîner_Par -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Entaîner_Par">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Equipe-FootBall"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Equipe-FootBall"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Entraine -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Entraine">
@@ -38,6 +48,16 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Président"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Président"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Gérer_Par -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Gérer_Par">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Equipe-FootBall"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Equipe-FootBall"/>
     </owl:ObjectProperty>
     
 
@@ -352,6 +372,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Barcelona">
         <rdf:type rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Equipe-FootBall"/>
+        <Entaîner_Par rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Ronald"/>
+        <Gérer_Par rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Sandro"/>
         <Participe rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Match1"/>
         <Nom_Equipe rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barcelona</Nom_Equipe>
         <Nombre_Joueurs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</Nombre_Joueurs>
@@ -449,6 +471,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Juventus">
         <rdf:type rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Equipe-FootBall"/>
+        <Entaîner_Par rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Pirlo"/>
+        <Gérer_Par rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Andrea"/>
         <Participe rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Match1"/>
         <Nom_Equipe rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juventus</Nom_Equipe>
         <Nombre_Joueurs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</Nombre_Joueurs>
@@ -531,7 +555,7 @@
         <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">33</Age>
         <Nationalite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Espagnol</Nationalite>
         <Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerard</Nom>
-        <Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piqué</Nom>
+        <Prenom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piqué</Prenom>
     </owl:NamedIndividual>
     
 
@@ -564,7 +588,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Ronald">
         <rdf:type rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Entraineur"/>
-        <Gére rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Barcelona"/>
+        <Entraine rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Barcelona"/>
         <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">57</Age>
         <Nationalite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Néerlandais</Nationalite>
         <Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ronald</Nom>
@@ -582,6 +606,19 @@
         <Nationalite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Egyptien</Nationalite>
         <Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mohamed</Nom>
         <Prenom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salah</Prenom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Sandro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Sandro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Président"/>
+        <Gére rdf:resource="http://www.semanticweb.org/ghaithbelkhir/ontologies/2020/10/DomaineSports#Barcelona"/>
+        <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">56</Age>
+        <Nationalite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanish</Nationalite>
+        <Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandro</Nom>
+        <Prenom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosell</Prenom>
     </owl:NamedIndividual>
 </rdf:RDF>
 
