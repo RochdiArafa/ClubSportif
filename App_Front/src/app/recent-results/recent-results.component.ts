@@ -7,16 +7,31 @@ import { SportService } from 'shard/sport.service';
   styleUrls: ['./recent-results.component.css']
 })
 export class RecentResultsComponent implements OnInit {
-  sports: any[] = [];
+  matchs: any[] = [];
   constructor(private service: SportService) { }
 
   ngOnInit() {
-    this.getAllPlayers();
+    this.getAllEndedMatch();
   }
 
-  getAllPlayers() {
-    this.service.getAllSports().subscribe( res => this.sports = res);
+  getAllEndedMatch() {
+    this.service.getAllEndedMatch().subscribe( matchs => {
+      if(matchs.length) {
+        this.service.getFootBallTeams("FootBall").subscribe( teams => {
+          if(teams.length) {
+            matchs.map( m => {
+              let participe = []
+              teams.map(team => {
+                if (team.participe.value === m.match.value)
+                  participe.push(team)
+              });
+              m.participe = participe
+              this.matchs.push(m)
+            })
+          }
+        })
+      }
+    });
   }
-
 
 }

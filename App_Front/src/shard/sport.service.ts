@@ -49,8 +49,8 @@ export class SportService {
     }), catchError(this.handleError));
   }
 
-  getAllMatch() {
-    return this.http.get(`http://localhost:8080/api/sport/allMatch`)
+  getMatchNotPlayed() {
+    return this.http.get(`http://localhost:8080/api/sport/MatchNotPlayed`)
     .pipe(map((res: any) => {
       const data = JSON.parse(res._body);
       return data.results.bindings
